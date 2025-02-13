@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: yellow;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+        }
+        
+        .main-text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+            animation: pulse 2s infinite;
+        }
+        
+        .main-text h1 {
+            color: black;
+            font-size: 5vw;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 0;
+        }
+        
+        .diagonal-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .diagonal-line {
+            position: absolute;
+            width: 200%;
+            height: 50px;
+            transform-origin: left top;
+            transform: rotate(45deg);
+            overflow: hidden;
+        }
+        
+        .diagonal-line:nth-child(1) {
+            top: 0%;
+            left: 0%;
+        }
+        
+        .diagonal-line:nth-child(2) {
+            top: 15%;
+            left: -10%;
+        }
+        
+        .diagonal-line:nth-child(3) {
+            top: 30%;
+            left: -20%;
+        }
+        
+        .diagonal-line:nth-child(4) {
+            top: 45%;
+            left: -30%;
+        }
+        
+        .diagonal-line:nth-child(5) {
+            top: 60%;
+            left: -40%;
+        }
+        
+        .diagonal-line:nth-child(6) {
+            top: 75%;
+            left: -50%;
+        }
+        
+        .scrolling-text {
+            position: absolute;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+            color: transparent;
+            -webkit-text-stroke: 2px white;
+            font-size: 3vw;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .address {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: black;
+            font-size: 16px;
+            z-index: 2;
+        }
+        
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.05); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="diagonal-container">
+        <div class="diagonal-line">
+            <div class="scrolling-text">
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY • 
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY • 
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY
+            </div>
+        </div>
+        <div class="diagonal-line">
+            <div class="scrolling-text">
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY • 
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY • 
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY
+            </div>
+        </div>
+        <div class="diagonal-line">
+            <div class="scrolling-text">
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY • 
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY • 
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY
+            </div>
+        </div>
+        <div class="diagonal-line">
+            <div class="scrolling-text">
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY • 
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY • 
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY
+            </div>
+        </div>
+        <div class="diagonal-line">
+            <div class="scrolling-text">
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY • 
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY • 
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY
+            </div>
+        </div>
+        <div class="diagonal-line">
+            <div class="scrolling-text">
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY • 
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY • 
+                BUY OR SELL • SELL OR BUY • BUY OR SELL • SELL OR BUY
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-text">
+        <h1>Winner Winner<br>Chicken Dinner?</h1>
+    </div>
+    
+    <div class="address">
+        -
+    </div>
+</body>
+</html>
